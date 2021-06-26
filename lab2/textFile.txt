@@ -1,0 +1,4 @@
+require('zlib').createGzip() is a readable & writable stream and it returns a zipped stream.
+
+
+This is the text.
