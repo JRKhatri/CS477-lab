@@ -47,8 +47,5 @@ class Book {
 
 }
 
-const newBook = new Book(null, "Node", "1234","12-2-2020", "Tina").save();
-console.log(newBook)
-console.log(collection)
 module.exports= Book;
 
