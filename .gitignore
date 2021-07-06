@@ -1,0 +1,4 @@
+*.DS_Store
+lab4/node_modules
+lab5/lab5-server/node_modules
+lab5/node_modules
