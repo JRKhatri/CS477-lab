@@ -4,15 +4,17 @@ class Book {
     constructor(id, title, ISBN, publishedDate, author){
         this.id = id;
         this.title = title;
-        this.ISBN = ISBN;
+        this.isbn = ISBN;
         this.publishedDate = publishedDate;
         this.author = author
     }
+
     save(){
         this.id = Math.round((Math.random() * 10000)).toString();
         collection.push(this);
         return this;
     }
+    
     update(){
         const index = collection.findIndex(item => item.id === this.id);
         if(index > -1){

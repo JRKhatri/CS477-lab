@@ -7,7 +7,7 @@
    iv. Use Postman to test your REST APIs
 4. Implement the features below inside lesson05-client project. 
     This project acts as SPA which make calls to lesson05-server APIs. 
-     You must have strong knowledge on JavaScript DOM APIs to complete the tasks. I highly recommand you to do this part if you have time.
+   You must have strong knowledge on JavaScript DOM APIs to complete the tasks. I highly recommand you to do this part if you have time.
 i. Modify index.html, carousel.css to match your design
 ii. Write JS code in main.js to implement the feature:
 a. List all books in index.html when open index.html in browser
