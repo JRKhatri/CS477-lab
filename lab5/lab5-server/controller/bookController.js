@@ -1,7 +1,7 @@
 const Book = require('../models/bookModel')
 console.log(module.exports)
 
-module.exports.getAllBooks = (req, res,next) => { 
+module.exports.getAllBooks = (req, res, next) => { 
     res.status(200).json(Book.listAll())
 }
 exports.save = (req, res, next) => {
