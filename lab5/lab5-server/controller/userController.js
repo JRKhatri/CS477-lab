@@ -5,6 +5,7 @@ const secret = 'cs477-lab5-assignment'
 //need to : npm install jsonwebtoken (third party API to generate token)
 
 exports.login = (req, res, next) => {
+    console.log(req.body)
     //get username n pw from bowser login page and verify with data
     const user = new User (req.body.username, req.body.password, null).login();
     
@@ -16,7 +17,7 @@ exports.login = (req, res, next) => {
         }, secret)
         res.json({jwtToken})
     }else {
-        res.json({"error":"invalid"})
+        res.json({"error":"Invalid Username or Password"})
     }
 }
 
