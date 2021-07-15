@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="main.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <div class="container-fluid">
+      <a class="navbar-brand">Online Book Store</a>
+      <a class="nav-link active" aria-current="page" href="#">HOME</a>
+      <a class="nav-link active" aria-current="page" href="./resources/about.html">ABOUT</a>
+      <a class="nav-link active" aria-current="page" href="./resources/contact.html">CONTACT US</a>
+    </div>
+  </nav>
+
+
+  <div class="container" id="signinupbtn">
+    <button type="button" class="btn btn-primary btn-lg" id="loginbtn" onclick="signIn()">LogIn</button>
+    <img src="./resources/img/ebook.jpg" alt="reading Book" width="900px" height="480px" />
+    <!-- <img src="./resources/img/laptop_books.jpg" alt="reading ebook" width="800px" height="480px"/> -->
+    <button type="button" class="btn btn-secondary btn-lg" id="signupbtn">Sign Up</button>
+  </div>
+
+  <!-- login form -->
+  <div class="container" id="login-div">
+    <form id="loginForm">
+      <div class="mb-3">
+        <label for="username" class="form-label">User Name</label>
+        <input type="text" class="form-control" id="username" aria-describedby="emailHelp">
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password">
+      </div>
+      <button type="submit" class="btn btn-primary" id="loginBtn">Login</button>
+    </form>
+  </div>
+  <!-- login form end-->
+
+
+  <!-- signup form start-->
+  <div class="container" id="signup-div">
+    <form class="container" id="signupForm">
+      <h4>Membership Signup Form</h4>
+      </br>
+      <div class="col-md-6">
+        <label for="username1" class="form-label">Username:</label>
+        <input type="text" class="form-control" id="username1">
+      </div>
+      <span id="error-msg"></span>
+      <div class="col-md-6">
+        <label for="password1" class="form-label">Password:</label>
+        <input type="password" class="form-control" id="password1">
+      </div>
+      <div class="col-md-6">
+        <label for="firstname" class="form-label">First Name:</label>
+        <input type="text" class="form-control" id="firstname">
+      </div>
+
+      <div class="col-md-6">
+        <label for="lastname" class="form-label">Last Name:</label>
+        <input type="text" class="form-control" id="lastname">
+      </div>
+
+      <div class="col-6">
+        <label for="address" class="form-label">Address</label>
+        <input type="text" class="form-control" id="address" placeholder="1234 Main St">
+      </div>
+
+      <div class="col-md-6">
+        <label for="city" class="form-label">City</label>
+        <input type="text" class="form-control" id="city">
+      </div>
+
+      <div class="col-md-2">
+        <label for="zip" class="form-label">Zip</label>
+        <input type="text" class="form-control" id="zip">
+      </div>
+      <!-- <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Email:</label>
+          <input type="email" class="form-control" id="inputEmail4">
+        </div> <br> -->
+      <label for="inputEmail4" class="form-label">Member Type:</label>
+      <select class="form-select col-md-6" id='role' aria-label="Default select example">
+        <option selected>Select Role</option>
+        <option value="1">Guest</option>
+        <option value="2">Admin</option>
+      </select>
+      <br>
+
+      <div class="col-6">
+        <button type="submit" class="btn btn-primary" id="signupSubmit">Submit</button>
+      </div>
+    </form>
+  </div>
+  <!-- signup form end-->
+  <!-- updateInfo div start -->
+  
+  <div class="container" id="updateInfo-div">
+    <form class="container" id="updateForm">
+      <h4>Edit Information</h4>
+      </br> 
+      <div class="col-md-6">
+        <label for="password9" class="form-label">Password:</label>
+        <input type="text" class="form-control" id="password9">
+      </div>
+      <span id="error-msg"></span>
+      <div class="col-md-6">
+        <label for="firstname2" class="form-label">First Name:</label>
+        <input type="text" class="form-control" id="firstname9">
+      </div>
+
+      <div class="col-md-6">
+        <label for="lastname2" class="form-label">Last Name:</label>
+        <input type="text" class="form-control" id="lastname9">
+      </div>
+
+      <div class="col-6">
+        <label for="address2" class="form-label">Address</label>
+        <input type="text" class="form-control" id="address9" placeholder="1234 Main St">
+      </div>
+
+      <div class="col-md-6">
+        <label for="city2" class="form-label">City</label>
+        <input type="text" class="form-control" id="city9">
+      </div>
+
+      <div class="col-md-2">
+        <label for="zip2" class="form-label">Zip</label>
+        <input type="text" class="form-control" id="zip9">
+      </div> 
+      <!-- <div class="col-md-6"> 
+          <label for="inputEmail4" class="form-label">Email:</label>
+          <input type="email" class="form-control" id="inputEmail4">
+        </div> <br> -->
+      <!-- <label for="inputEmail4" class="form-label">Member Type:</label>
+      <select class="form-select col-md-6" id='role' aria-label="Default select example">
+        <option selected>Select Role</option>
+        <option value="1">Guest</option>
+        <option value="2">Admin</option>
+      </select> -->
+      <br>
+
+      <div class="col-6">
+        <button type="submit" class="btn btn-primary" id="updateSubmit">Update</button>
+      </div>
+    </form>
+  </div> 
+
+  <!-- updateInfor div ends -->
+
+  <!-- Book display container start-->
+
+  <div class="container" id="book-container">
+
+    
+   <div id="hidetable" >
+    <h4>Book List</h4>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Title</th>
+          <th scope="col">ISBN No</th>
+          <th scope="col">Published Date</th>
+          <th scope="col">Author</th>
+          <th scope="col">Price</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody id="book-list-body">
+      </tbody>
+    </table> </br>
+
+    <div id="addBook-div" style="background-color: rgb(226, 218, 197);">
+      <h3 id="form-title">Add a Book</h3>
+      <form id="add-book">
+        <div class="mb-3">
+          <label for="title" class="form-label">Title :</label>
+          <input type="text" class="form-control" id="title">
+
+        </div>
+        <div class="mb-3">
+          <label for="isbn" class="form-label">ISBN No :</label>
+          <input type="number" class="form-control" id="isbn">
+        </div>
+        <div class="mb-3">
+          <label for="publishDate" class="form-label">Date of Publication :</label>
+          <input type="text" class="form-control" id="publishDate">
+        </div>
+        <div class="mb-3">
+          <label for="authorName" class="form-label">Author Name :</label>
+          <input type="text" class="form-control" id="authorName">
+        </div>
+        <div class="mb-3">
+          <label for="price" class="form-label">Price :</label>
+          <input type="text" class="form-control" id="price">
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="submitBtn">Submit</button>
+      </form>
+    </div> 
+    <div id= guestBtn>
+      <button id="viewCartBtn" style="position:-webkit-sticky;">View Cart</button> 
+      <button id="total" style="position:-webkit-sticky;">Total</button> 
+      <button id="checkout" style="position:-webkit-sticky;">Check Out</button> 
+      <button id="editInfo" style="position:-webkit-sticky;">Edit Information</button>
+      <button id="logoutBtn" style="position:-webkit-sticky;">LogOut</button> </br></br>
+
+    </div> </br></br>
+  </div>
+
+    
+   
+    <div id="cartList">
+      <h5>Carl list</h5>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">ISBN</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+          </tr>
+        </thead>
+        <tbody id="cart-list-body">
+        </tbody>
+        
+      </table> </br>
+      
+    </div></br> </br>
+    <div id="totalBill">
+      <h4>Total Bill :-</h4> </br> 
+    <span id="displayTotal"><h5>Total Bill</h5></span>
+    </div>
+
+  </div>
+  <!-- Book display container end -->
+
+  <!-- placeorder and payment form and page -->
+    
+      <div class="container" id="payment">
+        <form class="container" id="signupForm">
+          <h4>Billing Information</h4>
+          </br>
+          <div class="col-md-6">
+            <label for="firstname3" class="form-label">First Name:</label>
+            <input type="text" class="form-control" id="firstname3">
+          </div>
+    
+          <div class="col-md-6">
+            <label for="lastname3" class="form-label">Last Name:</label>
+            <input type="text" class="form-control" id="lastname3">
+          </div>
+    
+          <div class="col-6">
+            <label for="address3" class="form-label">Address</label>
+            <input type="text" class="form-control" id="address3" placeholder="1234 Main St">
+          </div>
+    
+          <div class="col-md-6">
+            <label for="accountno" class="form-label">Account No:</label>
+            <input type="number" class="form-control" id="accountno">
+          </div>
+          <div class="col-md-6">
+            <label for="exp" class="form-label">Exp-Date</label>
+            <input type="number" class="form-control" id="exp">
+          </div>
+          <div class="col-md-6">
+            <label for="zip" class="form-label">Zip Code</label>
+            <input type="number" class="form-control" id="zip">
+          </div>
+          <input type="button" value="submit" id="accountBtn">
+    
+    </form>
+    </div>
+
+    <button  id="ordered"> Place Order</button>
+    <div id="displayBill"></div>
+    <div id="tnx"></div>
+
+    
+    <div style="color:blue; font-size:160%; font-family:courier" class="container" id="finalsummary">
+      <div class="mb-3">
+      <h2> Bill Summary </h2>
+      <ul><li id="l1" > </li>
+      <li id="l2"></li>
+       <li id="l3"></li>
+       <li id="l4"></li>
+       <li id="l5"></li>
+       <li id="l6"></li></ul> 
+       <input type="button" value="Payment" id="finalPayment">
+       </div>
+       </div>
+
+       <span id="refresh"></span>
+      
+       <div id="userDiv" >
+        <h4>User Infomation</h4>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Password</th>
+              <th scope="col">Firstname</th>
+              <th scope="col">LastName</th>
+              <th scope="col">Address</th>
+              <th scope="col">City</th>
+              <th scope="col">Zip</th>
+          
+            </tr>
+          </thead>
+          <tbody id="userInformation">
+          </tbody>
+        </table> </br>
+
+        <div class="container" id="deleteCartItem-div">
+          <form class="container" id="deleteform">
+            <h4></h4>
+            </br> 
+            <div class="col-md-6">
+              <label for="deleteItem" class="form-label">Enter Product Id to Delete:</label>
+              <input type="text" class="form-control" id="deleteItem">
+            </div>
+            <div class="col-6">
+              <button type="submit" class="btn btn-primary" id="delete">Update</button>
+            </div>
+            </form>
+            </div>
+
+            <span id="error-msg"></span>
+
+        
+
+
+</body>
+
+</html>

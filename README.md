@@ -7,4 +7,5 @@
 4. [Lab4](./lab4)
 5. [Lab5 & Lab6](./lab5)
 6. [Lab7](./lab7)
+7. [Project](./Project_cs477)
 
